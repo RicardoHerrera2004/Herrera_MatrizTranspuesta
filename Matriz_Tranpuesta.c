@@ -11,7 +11,7 @@ int main()
     printf("Ingrese el valor de la columna de la matriz: ");
     scanf("%d", &b);  // Se pide y se escanea al usuario el numero de las columnas//
     int matrix[a][b]; // Se define la matriz con la que vamos a trabajar //
-    int matrix2[a][b];
+    int matrix2[b][a];
     srand(time(NULL)); // Se crea la funcion para crear numeros randoms//
     printf("Matriz original");
     for (int i = 0; i < a; i++) // Se crea el primer for para la creacion de la matriz, para el uso de filas//
@@ -26,10 +26,10 @@ int main()
     }
     printf("\n");
     printf("Nueva matriz");
-    for (int i = 0; i < a; i++)
+    for (int i = 0; i < b; i++)
     {
         printf("\n");
-        for (int j = 0; j < b; j++)
+        for (int j = 0; j < a; j++)
         {
             matrix2[i][j] = matrix[j][i];
             printf("%d \t", matrix2[i][j]);
